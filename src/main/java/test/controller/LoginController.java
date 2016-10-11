@@ -7,6 +7,7 @@ import test.model.Usuario;
 
 @Controller
 public class LoginController {
+
     @GetMapping("/")
     public String login(ModelMap model){
         Usuario user = new Usuario();
@@ -14,7 +15,7 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/")
+    @PostMapping("/user")
     public String usuario(ModelMap model, @ModelAttribute Usuario user){
         model.addAttribute("user", user);
         return "hello";

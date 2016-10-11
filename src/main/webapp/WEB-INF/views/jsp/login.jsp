@@ -24,7 +24,7 @@
 <body>
 
 <div class="media-body">
-    <form action="#" th:action="@{/}" th:object="${user}" method='POST'>
+    <form action="/user" method='POST'>
         <div>
             <div class="row">
                 <div class="col-md-3">
@@ -44,5 +44,7 @@
         </div>
     </form>
 </div>
+<a href="/hello/erc">Link</a>
+
 </body>
 </html>
