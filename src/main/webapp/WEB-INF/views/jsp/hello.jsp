@@ -1,23 +1,6 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="en">
+<jsp:include page="layout.jsp"/>
 <head>
-    <title>Maven + Spring MVC</title>
-
-    <spring:url value="/resources/css/hello.css" var="coreCss"/>
-    <spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss"/>
-
-    <link href="${bootstrapCss}" rel="stylesheet"/>
-    <link href="${coreCss}" rel="stylesheet"/>
-
-    <spring:url value="/resources/js/hello.js" var="coreJs"/>
-    <spring:url value="/resources/js/jquery-2.2.4.min.js" var="jQuery"/>
-    <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs"/>
-
-    <script src="${coreJs}"></script>
-    <script src="${jQuery}"></script>
-    <script src="${bootstrapJs}"></script>
     <script>
         $(document).ready(function(){
             $('#alternar').click(function(){
@@ -26,7 +9,6 @@
         });
     </script>
 </head>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
