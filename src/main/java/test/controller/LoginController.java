@@ -13,13 +13,13 @@ public class LoginController {
         Usuario user = new Usuario();
         model.addAttribute(user);
         model.addAttribute("title", "Spring MVC");
-        return "login";
+        return "/login.tiles";
     }
 
     @PostMapping("/user")
     public String usuario(ModelMap model, @ModelAttribute Usuario user, @ModelAttribute String title){
         model.addAttribute("user", user);
         model.addAttribute("title", "Spring MVC");
-        return "hello";
+        return "/welcome.tiles";
     }
 }
