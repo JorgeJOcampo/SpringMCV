@@ -1,6 +1,6 @@
 package test.model;
 
-public class Usuario {
+public class User {
     private String user;
     private String pass;
 
