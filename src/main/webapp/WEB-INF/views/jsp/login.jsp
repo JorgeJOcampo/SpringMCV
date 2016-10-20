@@ -8,11 +8,13 @@
                     <div class="col-md-3">
                         Usuario: <form:input path="user" class="form-control"/>
                     </div>
+                    <form:errors path="user" cssClass="error"/>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         Password: <form:password path="pass" class="form-control"/>
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="col-md-3">
