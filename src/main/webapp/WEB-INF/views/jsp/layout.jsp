@@ -6,9 +6,12 @@
 
     <spring:url value="/resources/css/hello.css" var="coreCss"/>
     <spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss"/>
+    <spring:url value="/resources/css/bootstrap-theme.min.css" var="bootstrapThemeCss"/>
 
     <link href="${bootstrapCss}" rel="stylesheet"/>
+    <link href="${bootstrapThemeCss}" rel="stylesheet"/>
     <link href="${coreCss}" rel="stylesheet"/>
+
 
     <spring:url value="/resources/js/hello.js" var="coreJs"/>
     <spring:url value="/resources/js/jquery-2.2.4.min.js" var="jQuery"/>

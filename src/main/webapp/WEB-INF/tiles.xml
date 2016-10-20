@@ -11,11 +11,11 @@
         <put-attribute name="footer" value="/WEB-INF/views/jsp/layout/footer.jsp" />
 
     </definition>
-    <definition name="/welcome.tiles" extends="baseLayout">
+    <definition name="hello" extends="baseLayout">
         <put-attribute name="title" value="Welcome page" />
         <put-attribute name="body" value="/WEB-INF/views/jsp/hello.jsp" />
     </definition>
-    <definition name="/login.tiles" extends="baseLayout">
+    <definition name="login" extends="baseLayout">
         <put-attribute name="title" value="Login" />
         <put-attribute name="body" value="/WEB-INF/views/jsp/login.jsp" />
     </definition>

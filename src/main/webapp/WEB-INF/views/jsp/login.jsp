@@ -1,14 +1,25 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<jsp:include page="layout.jsp"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <body>
     <div class="media-body">
+        <spring:hasBindErrors name="user">
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <c:forEach var="error" items="${errors.allErrors}">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button>
+                    <span class="glyphicon glyphicon-exclamation-sign"></span> <b><spring:message message="${error}"/></b>
+                    <br />
+                </c:forEach>
+            </div>
+        </spring:hasBindErrors>
         <form:form action="user" method='POST' commandName="user">
+            <%--Para mensajes individuales--%>
+            <%--<form:errors path="*" cssClass="alert alert-danger alert-dismissible"/>--%>
             <div>
                 <div class="row">
                     <div class="col-md-3">
                         Usuario: <form:input path="user" class="form-control"/>
                     </div>
-                    <form:errors path="user" cssClass="error"/>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
