@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <body>
     <div class="media-body">
-        <spring:hasBindErrors name="user">
+        <spring:hasBindErrors name="${objectName}">
             <div class="alert alert-danger alert-dismissible" role="alert">
                 <c:forEach var="error" items="${errors.allErrors}">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button>
