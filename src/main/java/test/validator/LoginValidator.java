@@ -16,7 +16,7 @@ public class LoginValidator implements Validator{
 //        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "id", "id.required");
 
 //        User emp = (User) obj;
-//        if(emp.getUser().equals("")){
+//        if(emp.getAlumno().equals("")){
 //            errors.rejectValue("user", "negativeValue", new Object[]{"'user'"}, "user can't be negative");
 //        }
 

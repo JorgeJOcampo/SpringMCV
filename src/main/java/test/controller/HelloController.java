@@ -2,9 +2,7 @@ package test.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -17,4 +15,11 @@ public class HelloController {
         model.addObject("msg", name);
         return model;
     }
+
+    @PostMapping("/hellow")
+    public String hellow(@ModelAttribute Alumno alumno, ModelMap model){
+        model.addAttribute(alumno);
+        return "alumno";
+    }
+
 }

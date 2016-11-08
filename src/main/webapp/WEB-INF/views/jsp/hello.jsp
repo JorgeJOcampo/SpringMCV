@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <head>
     <script>
         $(document).ready(function(){
@@ -24,11 +25,11 @@
                 Hello, ${name}!
             </c:if>
 
-            <c:if test="${not empty user.user}">
-                Hello, ${user.user}!
+            <c:if test="${not empty alumno.alumno}">
+                Hello, ${alumno.alumno}!
             </c:if>
 
-            <c:if test="${empty name && empty user.user}">
+            <c:if test="${empty name && empty alumno.alumno}">
                 Welcome guest! ${message}
             </c:if>
         </p>
@@ -37,6 +38,27 @@
         </p>
     </div>
 </div>
+
+<form:form action="hellow" method='POST' commandName="alumno">
+<div>
+<div class="row">
+<div class="col-md-3">
+Alumno: <form:hidden path="alumno" class="form-control"/>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+Edad: <form:input path="edad" class="form-control"/>
+</div>
+
+</div>
+<div class="row">
+<div class="col-md-3">
+<input class="btn btn-primary" type="submit" value="Submit" />
+</div>
+</div>
+</div>
+</form:form>
 
 <div class="container" id="container">
     <div class="row">

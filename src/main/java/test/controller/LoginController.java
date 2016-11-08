@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import test.model.User;
 import test.validator.LoginValidator;
 
@@ -33,13 +34,12 @@ public class LoginController {
     }
 
     @PostMapping("/user")
-    public String usuario(ModelMap model, @Valid @ModelAttribute User user, BindingResult bindingResult){
+    public String usuario(ModelMap model, @Valid @ModelAttribute User user, BindingResult bindingResult, RedirectAttributes redirectAttributes){
         if(bindingResult.hasErrors()){
             return "login";
         }
-        model.addAttribute("user", user);
-        model.addAttribute("title", "Spring MVC");
-        return "hello";
+        redirectAttributes.addFlashAttribute(user);
+        return "redirect:alumno";
     }
 
 }
